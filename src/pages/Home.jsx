@@ -7,7 +7,7 @@ export default function Home() {
 
               <div>
                 <h1>
-                  ahre
+                  hola isa
                 </h1>
               </div>
             <Footer />
