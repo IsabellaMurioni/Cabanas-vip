@@ -2,13 +2,10 @@
 import { useState } from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import wifiImg from "../assets/wifi.png"
-import tvImg from "../assets/tv.png"
-import cocinaImg from "../assets/cocina.png"
 import cabana2Img from "../assets/cabana2p.jpg"
 import cabana3Img from "../assets/cabana3p.jpg"
 import shellImg from "../assets/seashell.png"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, Users, Home, Bed } from "lucide-react"
 
 function CabinCarousel({ images, label }) {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -63,18 +60,14 @@ function CabinCarousel({ images, label }) {
 }
 
 export default function Cabanas() {
-  const cabin2Images = [
-    cabana2Img,
-    "/beautiful-beach-sunset-view.jpg",
-    "/ocean-view-with-blue-water.jpg",
-  ]
+  const cabin2Images = [cabana2Img, "/beautiful-beach-sunset-view.jpg", "/ocean-view-with-blue-water.jpg"]
 
   const cabin3Images = [cabana3Img, "/family-cabin-for-4-people.jpg", "/large-cabin-for-6-7-people.jpg"]
 
   const cabin4Images = ["/cabin-for-3-people.jpg", "/family-cabin-for-4-people.jpg", "/large-cabin-for-6-7-people.jpg"]
 
   const cabin5Images = ["/cabin-for-3-people.jpg", "/family-cabin-for-4-people.jpg", "/large-cabin-for-6-7-people.jpg"]
-  
+
   const cabin6Images = ["/cabin-for-3-people.jpg", "/family-cabin-for-4-people.jpg", "/large-cabin-for-6-7-people.jpg"]
 
   return (
@@ -101,15 +94,26 @@ export default function Cabanas() {
               <h2 className="text-3xl font-playfair text-[#775e5e] italic mb-6">Cabaña para 2 personas</h2>
               <div className="w-full h-[1px] bg-[#775e5e]/30 mb-6"></div>
               <p className="text-sm font-light text-[#775e5e] leading-relaxed tracking-wide mb-8">
-                Cabaña para 2 personas, perfecta para una escapada romántica o un descanso en pareja. Equipada con cama
-                matrimonial, cocina completa, baño privado y un ambiente acogedor. Disfruta de la tranquilidad del lugar
-                con todas las comodidades.
+                Cabaña para 2 personas, de dos ambientes, diseñadas en formato dúplex y distribuidas en dos plantas
+                sobre una superficie de 40 m², con muebles de algarrobo. En la planta baja se encuentra una cocina
+                completamente equipada junto a un comedor, ideal para compartir momentos en familia, además de un baño
+                completo, TV por cable, horno y microondas para mayor comodidad. En la planta alta se ubica un
+                dormitorio matrimonial con placard, ofreciendo un espacio íntimo y confortable para el descanso.
               </p>
 
-              <div className="flex gap-6 justify-center md:justify-start">
-                <img src={wifiImg} alt="WiFi" className="w-[28px] h-[26px] object-contain" />
-                <img src={tvImg} alt="TV" className="w-[30px] h-[30px] object-contain" />
-                <img src={cocinaImg} alt="Cocina" className="w-[34px] h-[34px] object-contain" />
+              <div className="flex gap-3 sm:gap-6 md:gap-8 justify-center md:justify-start items-center">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-xs sm:text-sm font-light text-[#775e5e] whitespace-nowrap">2 personas</span>
+                </div>
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Home className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-xs sm:text-sm font-light text-[#775e5e] whitespace-nowrap">2 ambientes</span>
+                </div>
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Bed className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-xs sm:text-sm font-light text-[#775e5e] whitespace-nowrap">1 matrimonial</span>
+                </div>
               </div>
             </div>
           </div>
@@ -128,15 +132,28 @@ export default function Cabanas() {
               <h2 className="text-3xl font-playfair text-[#775e5e] italic mb-6">Cabaña para 3 personas</h2>
               <div className="w-full h-[1px] bg-[#775e5e]/30 mb-6"></div>
               <p className="text-sm font-light text-[#775e5e] leading-relaxed tracking-wide mb-8">
-                Cabaña para 3 personas, perfecta para una escapada romántica o un descanso en pareja. Equipada con cama
-                matrimonial, cocina completa, baño privado y un ambiente acogedor. Disfruta de la tranquilidad del lugar
-                con todas las comodidades.
+                Cabaña para 3 personas, de dos ambientes, diseñadas en formato dúplex y distribuidas en dos plantas
+                sobre una superficie de 40 m², con muebles de algarrobo. En la planta baja se encuentra una cocina
+                completamente equipada junto a un comedor, ideal para compartir momentos en familia, además de un baño
+                completo, TV por cable, horno, microondas, y una cama individual. En la planta alta se ubica un
+                dormitorio matrimonial con placard, ofreciendo un espacio íntimo y confortable para el descanso.
               </p>
 
-              <div className="flex gap-6 justify-center md:justify-start">
-                <img src={wifiImg} alt="WiFi" className="w-[28px] h-[26px] object-contain" />
-                <img src={tvImg} alt="TV" className="w-[30px] h-[30px] object-contain" />
-                <img src={cocinaImg} alt="Cocina" className="w-[34px] h-[34px] object-contain" />
+              <div className="flex gap-2 sm:gap-4 md:gap-6 justify-center md:justify-start items-center flex-wrap sm:flex-nowrap">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-xs sm:text-sm font-light text-[#775e5e] whitespace-nowrap">3 personas</span>
+                </div>
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Home className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-xs sm:text-sm font-light text-[#775e5e] whitespace-nowrap">2 ambientes</span>
+                </div>
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Bed className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-[10px] sm:text-xs md:text-sm font-light text-[#775e5e] whitespace-nowrap">
+                    1 matrimonial y 1 individual
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -148,22 +165,35 @@ export default function Cabanas() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
-              <CabinCarousel images={cabin2Images} label="2 PERSONAS" />
+              <CabinCarousel images={cabin2Images} label="4 PERSONAS" />
             </div>
 
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h2 className="text-3xl font-playfair text-[#775e5e] italic mb-6">Cabaña para 4 personas</h2>
               <div className="w-full h-[1px] bg-[#775e5e]/30 mb-6"></div>
               <p className="text-sm font-light text-[#775e5e] leading-relaxed tracking-wide mb-8">
-                Cabaña para 4 personas, perfecta para una escapada romántica o un descanso en pareja. Equipada con cama
-                matrimonial, cocina completa, baño privado y un ambiente acogedor. Disfruta de la tranquilidad del lugar
-                con todas las comodidades.
+                Cabaña para 4 personas, de dos ambientes, diseñadas en formato dúplex y distribuidas en dos plantas
+                sobre una superficie de 40 m², con muebles de algarrobo. En la planta baja se encuentra una cocina
+                completamente equipada junto a un comedor, ideal para compartir momentos en familia, además de un baño
+                completo, TV por cable, horno, microondas, y dos camas individuales. En la planta alta se ubica un
+                dormitorio matrimonial con placard, ofreciendo un espacio íntimo y confortable para el descanso.
               </p>
 
-              <div className="flex gap-6 justify-center md:justify-start">
-                <img src={wifiImg} alt="WiFi" className="w-[28px] h-[26px] object-contain" />
-                <img src={tvImg} alt="TV" className="w-[30px] h-[30px] object-contain" />
-                <img src={cocinaImg} alt="Cocina" className="w-[34px] h-[34px] object-contain" />
+              <div className="flex gap-2 sm:gap-4 md:gap-6 justify-center md:justify-start items-center flex-wrap sm:flex-nowrap">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-xs sm:text-sm font-light text-[#775e5e] whitespace-nowrap">4 personas</span>
+                </div>
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Home className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-xs sm:text-sm font-light text-[#775e5e] whitespace-nowrap">2 ambientes</span>
+                </div>
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Bed className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-[10px] sm:text-xs md:text-sm font-light text-[#775e5e] whitespace-nowrap">
+                    1 matrimonial y 2 individuales
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -175,22 +205,35 @@ export default function Cabanas() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row-reverse items-center gap-12">
             <div className="w-full md:w-1/2">
-              <CabinCarousel images={cabin3Images} label="3 PERSONAS" />
+              <CabinCarousel images={cabin3Images} label="5 PERSONAS" />
             </div>
 
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h2 className="text-3xl font-playfair text-[#775e5e] italic mb-6">Cabaña para 5 personas</h2>
               <div className="w-full h-[1px] bg-[#775e5e]/30 mb-6"></div>
               <p className="text-sm font-light text-[#775e5e] leading-relaxed tracking-wide mb-8">
-                Cabaña para 5 personas, perfecta para una escapada romántica o un descanso en pareja. Equipada con cama
-                matrimonial, cocina completa, baño privado y un ambiente acogedor. Disfruta de la tranquilidad del lugar
-                con todas las comodidades.
+                Cabaña para 5 personas, de tres ambientes, diseñadas en formato dúplex y distribuidas en dos plantas
+                sobre una superficie de 60 m², con muebles de algarrobo. En la planta baja se encuentra una cocina
+                completamente equipada junto a un comedor, ideal para compartir momentos en familia, además de un baño
+                completo, TV por cable, horno, microondas, y tres camas individuales. En la planta alta se ubica un
+                dormitorio matrimonial con placard, ofreciendo un espacio íntimo y confortable para el descanso.
               </p>
 
-              <div className="flex gap-6 justify-center md:justify-start">
-                <img src={wifiImg} alt="WiFi" className="w-[28px] h-[26px] object-contain" />
-                <img src={tvImg} alt="TV" className="w-[30px] h-[30px] object-contain" />
-                <img src={cocinaImg} alt="Cocina" className="w-[34px] h-[34px] object-contain" />
+              <div className="flex gap-2 sm:gap-4 md:gap-6 justify-center md:justify-start items-center flex-wrap sm:flex-nowrap">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-xs sm:text-sm font-light text-[#775e5e] whitespace-nowrap">5 personas</span>
+                </div>
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Home className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-xs sm:text-sm font-light text-[#775e5e] whitespace-nowrap">3 ambientes</span>
+                </div>
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Bed className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-[10px] sm:text-xs md:text-sm font-light text-[#775e5e] whitespace-nowrap">
+                    1 matrimonial y 3 individuales
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -202,29 +245,42 @@ export default function Cabanas() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
-              <CabinCarousel images={cabin2Images} label="2 PERSONAS" />
+              <CabinCarousel images={cabin2Images} label="6/7 PERSONAS" />
             </div>
 
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h2 className="text-3xl font-playfair text-[#775e5e] italic mb-6">Cabaña para 6/7 personas</h2>
               <div className="w-full h-[1px] bg-[#775e5e]/30 mb-6"></div>
               <p className="text-sm font-light text-[#775e5e] leading-relaxed tracking-wide mb-8">
-                Cabaña para 6/7 personas, perfecta para una escapada romántica o un descanso en pareja. Equipada con cama
-                matrimonial, cocina completa, baño privado y un ambiente acogedor. Disfruta de la tranquilidad del lugar
-                con todas las comodidades.
+                Cabaña para 6/7 personas, de tres ambientes, diseñadas en formato dúplex y distribuidas en dos plantas
+                sobre una superficie de 80 m², con muebles de algarrobo. En la planta baja se encuentra una cocina
+                completamente equipada junto a un comedor, ideal para compartir momentos en familia, además de un baño
+                completo, TV por cable, horno, microondas, y dos camas individuales. En la planta alta se ubica un
+                dormitorio matrimonial con placard y un dormitorio con tres camas individuales.
               </p>
 
-              <div className="flex gap-6 justify-center md:justify-start">
-                <img src={wifiImg} alt="WiFi" className="w-[28px] h-[26px] object-contain" />
-                <img src={tvImg} alt="TV" className="w-[30px] h-[30px] object-contain" />
-                <img src={cocinaImg} alt="Cocina" className="w-[34px] h-[34px] object-contain" />
+              <div className="flex gap-2 sm:gap-4 md:gap-6 justify-center md:justify-start items-center flex-wrap sm:flex-nowrap">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-xs sm:text-sm font-light text-[#775e5e] whitespace-nowrap">6/7 personas</span>
+                </div>
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Home className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-xs sm:text-sm font-light text-[#775e5e] whitespace-nowrap">3 ambientes</span>
+                </div>
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Bed className="w-4 h-4 sm:w-5 sm:h-5 text-[#775e5e] stroke-[1.5]" />
+                  <span className="text-[10px] sm:text-xs md:text-sm font-light text-[#775e5e] whitespace-nowrap">
+                    1 matrimonial y 5 individuales
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-       <section className="relative py-24 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8">
         {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -233,20 +289,22 @@ export default function Cabanas() {
 
         {/* White arch overlay */}
         <div className="relative flex justify-center items-center">
-          <div className="bg-[#fffaf5] rounded-t-full pt-16 pb-24 px-8 text-center"
-          style={{
-            width: "300px",      // ancho del arco
-            height: "350px",     // altura del arco
-            borderTopLeftRadius: "150px",
+          <div
+            className="bg-[#fffaf5] rounded-t-full pt-16 pb-24 px-8 text-center"
+            style={{
+              width: "300px", // ancho del arco
+              height: "350px", // altura del arco
+              borderTopLeftRadius: "150px",
               borderTopRightRadius: "150px",
               paddingTop: "2.5rem",
               paddingBottom: "2rem",
               paddingLeft: "1.5rem",
               paddingRight: "1.5rem",
-        }}>
+            }}
+          >
             {/* Seashell icon */}
             <div className="flex justify-center mb-2">
-              <img src={shellImg} alt="Seashell" className="w-[90px] h-[90px] object-contain" />
+              <img src={shellImg || "/placeholder.svg"} alt="Seashell" className="w-[90px] h-[90px] object-contain" />
             </div>
 
             {/* Title */}
@@ -254,12 +312,15 @@ export default function Cabanas() {
 
             {/* Subtitle */}
             <p className="text-xs font-light text-[#775e5e] tracking-wider mb-8">
-              Hacé tu reserva con anticipación y <br>
-              </br>no pierdas tu lugar. Hace click aquí.
+              Hacé tu reserva con anticipación y <br />
+              no pierdas tu lugar. Hace click aquí.
             </p>
 
             {/* Button */}
-            <button className="px-8 py-2.5 border border-[#775e5e] text-[#775e5e] rounded-full text-sm font-light tracking-wide hover:bg-[#775e5e] hover:text-white transition-all duration-300">
+            <button
+              to="/cabanas"
+              className="px-8 py-2.5 border border-[#775e5e] text-[#775e5e] rounded-full text-sm font-light tracking-wide hover:bg-[#775e5e] hover:text-white transition-all duration-300"
+            >
               RESERVA ACÁ
             </button>
           </div>

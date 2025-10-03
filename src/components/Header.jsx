@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import { Link } from "react-router-dom"
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,19 +15,20 @@ export default function Header() {
     <nav className="font-instrument relative text-[#775e5e] h-20 flex items-center px-4 xl:px-8 mt-4 font-light">
       {/* Menú desktop - izquierdo */}
       <div className="hidden xl:flex space-x-20 ml-24">
-        <a href="#inicio" className="relative text-base font-light tracking-wider transition-all duration-300 group">
+        <Link to="/" className="relative text-base font-light tracking-wider transition-all duration-300 group">
           INICIO
           <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#775e5e] transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#cabanas" className="relative text-base font-light tracking-wider transition-all duration-300 group">
+        </Link>
+        <Link to="/cabanas" className="relative text-base font-light tracking-wider transition-all duration-300 group">
           CABAÑAS
           <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#775e5e] transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#servicios" className="relative text-base font-light tracking-wider transition-all duration-300 group">
+        </Link>
+        <Link to="/servicios" className="relative text-base font-light tracking-wider transition-all duration-300 group">
           SERVICIOS
           <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#775e5e] transition-all duration-300 group-hover:w-full"></span>
-        </a>
+        </Link>
       </div>
+
 
       {/* Botón hamburguesa - móvil */}
       <div className="xl:hidden ml-8">
@@ -54,18 +57,19 @@ export default function Header() {
 
       {/* Logo centrado */}
       <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-        <img src="/src/assets/logo1.png" alt="Logo Cabañas VIP" className="h-[80px] xl:h-[100px]" />
+        <Link to="/">
+          <img src="/src/assets/logo1.png" alt="Logo Cabañas VIP" className="h-[80px] xl:h-[100px]" />
+        </Link>
         <span className="text-sm font-light"></span>
       </div>
 
       {/* Botón derecho - desktop */}
       <div className="hidden xl:block ml-auto mr-24">
-        <a
-          href="#reserva"
+        <Link to="/reserva"
           className="px-6 py-2 border border-[#775e5e] rounded-full text-sm font-light tracking-wider transition-all duration-300 hover:bg-[#775e5e] hover:text-white hover:scale-105 hover:shadow-lg"
         >
           RESERVÁ ACÁ
-        </a>
+        </Link>
       </div>
 
       {/* Menú móvil desplegable */}
@@ -87,39 +91,33 @@ export default function Header() {
 
           {/* Items del menú */}
           <div className="flex flex-col items-center space-y-8">
-            <a
-              href="#inicio"
+            <Link to="/"
               onClick={toggleMenu}
               className="relative text-2xl font-light tracking-widest transition-all duration-300 hover:text-[#775e5e] text-[#775e5e] group"
             >
               INICIO
               <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-[#775e5e] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a
-              href="#cabanas"
+            </Link>
+            <Link to="/cabanas"
               onClick={toggleMenu}
               className="relative text-2xl font-light tracking-widest transition-all duration-300 hover:text-[#775e5e] text-[#775e5e] group"
             >
               CABAÑAS
               <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-[#775e5e] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a
-              href="#servicios"
+            </Link>
+            <Link to="/servicios"
               onClick={toggleMenu}
               className="relative text-2xl font-light tracking-widest transition-all duration-300 hover:text-[#775e5e] text-[#775e5e] group"
             >
               SERVICIOS
               <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-[#775e5e] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-
-            {/* Botón de reserva en móvil */}
-            <a
-              href="#reserva"
+            </Link>
+            <Link to="/reserva"
               onClick={toggleMenu}
               className="mt-8 px-8 py-3 border border-[#775e5e] rounded-full text-lg font-light tracking-widest transition-all duration-300 hover:bg-[#775e5e] hover:text-white hover:scale-105"
             >
               RESERVÁ ACÁ
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -11,7 +11,8 @@ import cabana4Img from "../assets/cabana4.jpg"
 import cabana6Img from "../assets/cabana6.jpg"
 import arbolImg from "../assets/arbol.png"
 import casarosaImg from "../assets/casarosa.jpg"
-import footerImg from "../assets/footerimg.jpg"
+import casaImg from "../assets/home.jpg"
+import { Link } from "react-router-dom"
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState(null)
@@ -56,7 +57,12 @@ export default function Home() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-light text-center text-[#775e5e] mb-12 tracking-wider">NUESTRAS CABAÑAS</h2>
+          <h2 className="text-2xl font-light text-center text-[#775e5e] mb-6 tracking-wider">NUESTRAS CABAÑAS</h2>
+
+          <p className="text-center text-[#775e5e] font-light text-base leading-relaxed max-w-[500px] mx-auto mb-12">
+            Contamos con 14 cabañas con capacidad desde 2 hasta 7 personas, con todo el equipamiento necesario para que
+            su estadía sea placentera y cómoda.
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Cabaña 2 personas */}
@@ -103,12 +109,11 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <a
-              href="#cabanas"
-              className="px-6 py-2 border border-[#775e5e] rounded-full text-sm font-light tracking-wider text-[#775e5e] transition-all duration-300 hover:bg-[#775e5e] hover:text-white hover:scale-105 hover:shadow-lg"
+            <Link to="/cabanas"
+              className="px-6 py-2 border border-[#775e5e] rounded-full text-sm font-light tracking-wider text-[#775e5e] transition-all duration-300 hover:bg-[#775e5e] hover:text-white hover:scale-105"
             >
               VER CABAÑAS
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -167,12 +172,11 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <a
-              href="#servicios"
-              className="px-6 py-2 border border-white rounded-full text-sm font-light tracking-wider text-white transition-all duration-300 hover:bg-white hover:text-gray-800 hover:scale-105 hover:shadow-lg"
+            <Link to="/servicios"
+              className="px-6 py-2 border border-white rounded-full text-sm font-light tracking-wider text-white transition-all duration-300 hover:bg-white hover:text-gray-800 hover:scale-105"
             >
               VER SERVICIOS
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -191,11 +195,18 @@ export default function Home() {
           <div className="w-full md:w-[45%] text-center">
             <div className="flex flex-col items-center">
               <img src={arbolImg || "/placeholder.svg"} alt="Ícono palma" className="w-[80px] h-[80px] mb-6" />
-              <h3 className="text-3xl font-playfair text-[#775e5e] italic mb-4">A solos pasos del mar</h3>
+              <h3 className="text-3xl font-playfair text-[#775e5e] italic mb-2">A solos pasos del mar</h3>
               <p className="text-base font-light text-[#775e5e] leading-relaxed max-w-md">
-                hola hola hola hola hola <br />
-                hola hola hola hola hola hola
+                Solo 12 cuadras de la playa
               </p>
+              <div className="text-center mt-8">
+                <a
+                  href="https://www.google.com/maps/place/Caba%C3%B1as+Vip/@-37.8403664,-57.5156893,17z/data=!3m1!4b1!4m9!3m8!1s0x9584d0ecc57159cd:0xbfba1e06afabc2b4!5m2!4m1!1i2!8m2!3d-37.8403707!4d-57.5131144!16s%2Fg%2F1vd968d_?entry=ttu&g_ep=EgoyMDI1MDkyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank"
+                  className="px-6 py-2 border border-[#775e5e] rounded-full text-sm font-light tracking-wider text-[#775e5e] transition-all duration-300 hover:bg-[#775e5e] hover:text-white hover:scale-105"
+                >
+                  VER UBICACIÓN
+                </a>
+              </div>
             </div>
           </div>
         </div>
