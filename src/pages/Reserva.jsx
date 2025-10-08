@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import Header from "../components/Header"
+import HeaderBrown from "../components/HeaderBrown"
 import Footer from "../components/Footer"
 import emailjs from "@emailjs/browser"
 
@@ -56,7 +56,7 @@ export default function Reserva() {
 
   return (
     <div className="relative flex flex-col font-instrument bg-[#fffaf5] min-h-screen">
-      <Header />
+      <HeaderBrown />
 
       {/* Formulario de Contacto */}
       <section className="pt-[100px] pb-16 px-4 sm:px-6 lg:px-8 flex-grow">

@@ -1,5 +1,5 @@
 "use client"
-import Header from "../components/Header"
+import HeaderBrown from "../components/HeaderBrown"
 import Footer from "../components/Footer"
 import { Wifi, ChefHat, Home, Fan, Waves, TreePine, Flame, Car, Camera } from "lucide-react"
 
@@ -71,18 +71,11 @@ export default function Servicios() {
 
   return (
     <div className="relative flex flex-col font-instrument bg-[#fffaf5] min-h-screen">
-      {/* Hero Section with Header */}
-      <div
-        className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] xl:h-[600px] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/src/assets/playa.jpg')" }}
-      >
-        <div className="absolute inset-0 z-10">
-          <Header />
-        </div>
-      </div>
+    
+          <HeaderBrown />
 
       {/* Services Section */}
-      <section className="py-16 px-6">
+      <section className="pt-[100px] pb-16 px-4 sm:px-6 lg:px-8 flex-grow">
         <div className="max-w-7xl mx-auto">
           {/* Title */}
           <h2 className="text-2xl font-light text-center text-[#775e5e] mb-12 tracking-wider">NUESTROS SERVICIOS</h2>

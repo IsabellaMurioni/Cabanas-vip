@@ -6,11 +6,11 @@ import Footer from "../components/Footer"
 import cabanaImg from "../assets/cabana.png"
 import piletaImg from "../assets/pileta.png"
 import estacionamientoImg from "../assets/estacionamiento.png"
-import cabana2Img from "../assets/cabana2.jpg"
-import cabana4Img from "../assets/cabana4.jpg"
-import cabana6Img from "../assets/cabana6.jpg"
+import cabana2Img from "../assets/cabana2p-2.jpeg"
+import cabana5Img from "../assets/cabana5p-2.jpeg"
+import cabana6Img from "../assets/cabana6p-2.jpeg"
 import arbolImg from "../assets/arbol.png"
-import casarosaImg from "../assets/casarosa.jpg"
+import casaexteriorImg from "../assets/playa.png"
 import casaImg from "../assets/home.jpg"
 import { Link } from "react-router-dom"
 
@@ -25,7 +25,7 @@ export default function Home() {
     {
       question: "¿Cómo hago una reserva?",
       answer:
-        "Puedes hacer tu reserva a través de nuestro sitio web, por teléfono o WhatsApp. Te pediremos algunos datos básicos y una seña para confirmar tu estadía.",
+        "Puedes hacer tu reserva por WhatsApp o completando el formulario de contacto. Te pediremos algunos datos básicos y una seña para confirmar tu estadía.",
     },
     {
       question: "¿Se aceptan mascotas?",
@@ -48,7 +48,7 @@ export default function Home() {
     <div className="relative flex flex-col font-instrument bg-[#fffaf5] ">
       <div
         className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] xl:h-[600px] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/src/assets/playa.jpg')" }}
+        style={{ backgroundImage: "url('/src/assets/exterior3.png')" }}
       >
         <div className="absolute inset-0 z-10">
           <Header />
@@ -83,12 +83,12 @@ export default function Home() {
             <div className="relative group">
               <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
                 <img
-                  src={cabana4Img || "/placeholder.svg"}
+                  src={cabana5Img || "/placeholder.svg"}
                   alt="Cabaña para 4 personas"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-transparent border-t border-white text-white text-center py-3">
-                  <span className="text-sm font-light tracking-wider">4 PERSONAS</span>
+                  <span className="text-sm font-light tracking-wider">5 PERSONAS</span>
                 </div>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function Home() {
       <section
         className="py-16 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/src/assets/mar.jpg')",
+          backgroundImage: "url('/src/assets/exterior2.png')",
           minHeight: "400px",
         }}
       >
@@ -134,9 +134,10 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-light tracking-wider mb-4">COCINA EQUIPADA</h3>
               <p className="text-base font-light tracking-wider leading-relaxed">
-                hola hola hola hola
+                Cocina completa con todos los  
                 <br />
-                hola hola hola hola hola
+                utensilios y electrodomésticos 
+                <br /> necesarios.
               </p>
             </div>
 
@@ -147,9 +148,9 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-light tracking-wider mb-4">PISCINA CON SOLARIUM</h3>
               <p className="text-base font-light tracking-wider leading-relaxed">
-                hola hola hola hola
+                Piscina climatizada con área 
                 <br />
-                hola hola hola hola hola
+                de descanso y reposeras.
               </p>
             </div>
 
@@ -164,9 +165,9 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-light tracking-wider mb-4">Wi-Fi Y ESTACIONAMIENTO</h3>
               <p className="text-base font-light tracking-wider leading-relaxed">
-                hola hola hola hola
+                Estacionamiento seguro y 
                 <br />
-                hola hola hola hola hola
+                privado para tu vehículo.
               </p>
             </div>
           </div>
@@ -185,7 +186,7 @@ export default function Home() {
           {/* Imagen a la izquierda */}
           <div className="w-full md:w-[45%]">
             <img
-              src={casarosaImg || "/placeholder.svg"}
+              src={casaexteriorImg || "/placeholder.svg"}
               alt="Vista de la cabaña cerca del mar"
               className="w-full h-[400px] rounded-lg object-cover md:ml-16"
             />
@@ -252,7 +253,7 @@ export default function Home() {
       <section
         className="mt-12 py-16 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/src/assets/footerimg.jpg')",
+          backgroundImage: "url('/src/assets/exterior4.jpeg')",
           minHeight: "400px",
           backgroundSize: "cover", // asegura que la imagen cubra toda el área
           backgroundPosition: "center", // centra la imagen

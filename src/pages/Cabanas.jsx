@@ -2,10 +2,31 @@
 import { useState } from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import cabana2Img from "../assets/cabana2p.jpg"
-import cabana3Img from "../assets/cabana3p.jpg"
+import cabana2p1Img from "../assets/cabana2p-1.jpeg"
+import cabana2p2Img from "../assets/cabana2p-2.jpeg"
+import cabana2p3Img from "../assets/cabana2p-3.jpeg"
+import cabana2p4Img from "../assets/cabana2p-4.jpeg"
+import cabana3p1Img from "../assets/cabana3p-1.jpeg"
+import cabana3p2Img from "../assets/cabana3p-2.jpeg"
+import cabana3p3Img from "../assets/cabana3p-3.jpeg"
+import cabana3p4Img from "../assets/cabana3p-4.jpeg"
+import cabana4p1Img from "../assets/cabana4p-1.jpeg"
+import cabana4p2Img from "../assets/cabana4p-2.jpeg"
+import cabana4p3Img from "../assets/cabana4p-3.jpeg"
+import cabana4p4Img from "../assets/cabana4p-4.jpeg"
+import cabana4p5Img from "../assets/cabana4p-5.jpeg"
+import cabana4p6Img from "../assets/cabana4p-6.jpeg"
+import cabana5p1Img from "../assets/cabana5p-1.jpeg"
+import cabana5p2Img from "../assets/cabana5p-2.jpeg"
+import cabana5p3Img from "../assets/cabana5p-3.jpeg"
+import cabana5p4Img from "../assets/cabana5p-4.jpeg"
+import cabana6p1Img from "../assets/cabana6p-1.jpeg"
+import cabana6p2Img from "../assets/cabana6p-2.jpeg"
+import cabana6p3Img from "../assets/cabana6p-3.jpeg"
+import cabana6p4Img from "../assets/cabana6p-4.jpeg"
 import shellImg from "../assets/seashell.png"
 import { ChevronLeft, ChevronRight, Users, Home, Bed } from "lucide-react"
+import { Link } from "react-router-dom"
 
 function CabinCarousel({ images, label }) {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -60,22 +81,22 @@ function CabinCarousel({ images, label }) {
 }
 
 export default function Cabanas() {
-  const cabin2Images = [cabana2Img, "/beautiful-beach-sunset-view.jpg", "/ocean-view-with-blue-water.jpg"]
+  const cabin2Images = [cabana2p4Img, cabana2p2Img, cabana2p3Img, cabana2p1Img]
 
-  const cabin3Images = [cabana3Img, "/family-cabin-for-4-people.jpg", "/large-cabin-for-6-7-people.jpg"]
+  const cabin3Images = [cabana3p1Img, cabana3p3Img, cabana3p2Img, cabana3p4Img]
 
-  const cabin4Images = ["/cabin-for-3-people.jpg", "/family-cabin-for-4-people.jpg", "/large-cabin-for-6-7-people.jpg"]
+  const cabin4Images = [cabana4p1Img, cabana4p2Img, cabana4p3Img, cabana4p4Img, cabana4p5Img, cabana4p6Img]
 
-  const cabin5Images = ["/cabin-for-3-people.jpg", "/family-cabin-for-4-people.jpg", "/large-cabin-for-6-7-people.jpg"]
+  const cabin5Images = [cabana5p2Img, cabana5p3Img, cabana5p1Img, cabana5p4Img]
 
-  const cabin6Images = ["/cabin-for-3-people.jpg", "/family-cabin-for-4-people.jpg", "/large-cabin-for-6-7-people.jpg"]
+  const cabin6Images = [cabana6p1Img, cabana6p2Img, cabana6p3Img, cabana6p4Img]
 
   return (
     <div className="relative flex flex-col font-instrument bg-[#fffaf5]">
       {/* Hero section with Header */}
       <div
         className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] xl:h-[600px] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/src/assets/playa.jpg')" }}
+        style={{ backgroundImage: "url('/src/assets/exterior5.png')" }}
       >
         <div className="absolute inset-0 z-10">
           <Header />
@@ -165,7 +186,7 @@ export default function Cabanas() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
-              <CabinCarousel images={cabin2Images} label="4 PERSONAS" />
+              <CabinCarousel images={cabin4Images} label="4 PERSONAS" />
             </div>
 
             <div className="w-full md:w-1/2 text-center md:text-left">
@@ -205,7 +226,7 @@ export default function Cabanas() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row-reverse items-center gap-12">
             <div className="w-full md:w-1/2">
-              <CabinCarousel images={cabin3Images} label="5 PERSONAS" />
+              <CabinCarousel images={cabin5Images} label="5 PERSONAS" />
             </div>
 
             <div className="w-full md:w-1/2 text-center md:text-left">
@@ -245,7 +266,7 @@ export default function Cabanas() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
-              <CabinCarousel images={cabin2Images} label="6/7 PERSONAS" />
+              <CabinCarousel images={cabin6Images} label="6/7 PERSONAS" />
             </div>
 
             <div className="w-full md:w-1/2 text-center md:text-left">
@@ -284,7 +305,7 @@ export default function Cabanas() {
         {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/src/assets/atardecer.jpg')" }}
+          style={{ backgroundImage: "url('/src/assets/flores.png')" }}
         ></div>
 
         {/* White arch overlay */}
@@ -317,12 +338,12 @@ export default function Cabanas() {
             </p>
 
             {/* Button */}
-            <button
-              to="/cabanas"
+            <Link button
+              to="/reserva"
               className="px-8 py-2.5 border border-[#775e5e] text-[#775e5e] rounded-full text-sm font-light tracking-wide hover:bg-[#775e5e] hover:text-white transition-all duration-300"
             >
               RESERVA ACÁ
-            </button>
+            </Link>
           </div>
         </div>
       </section>
