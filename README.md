@@ -1,12 +1,52 @@
-# React + Vite
+# Web del Complejo de Cabañas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Esta web corresponde a un complejo de cabañas y está pensada para que los clientes puedan conocer el lugar antes de reservar. A través del sitio, los usuarios pueden recorrer visualmente el complejo, ver fotos del interior y exterior de las cabañas, y consultar los servicios disponibles.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La aplicación ofrece una experiencia clara, visual y responsive, enfocada en mostrar el diseño, la comodidad y el entorno del complejo.
 
-## Expanding the ESLint configuration
+## Funcionalidades principales
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Visualización del complejo y sus espacios comunes.
+* Información detallada sobre los servicios ofrecidos.
+* Navegación fluida entre secciones.
+* Diseño adaptable a distintos dispositivos.
+
+## Tecnologías utilizadas
+
+### Frontend
+
+* React + TypeScript
+* Vite (build tool y servidor de desarrollo)
+* TailwindCSS (framework CSS)
+* React Router (enrutamiento)
+* Lucide React (iconos)
+
+## Instalación y ejecución
+
+### Frontend
+
+1. Abrir una nueva terminal.
+2. Navegar al directorio del frontend:
+
+   ```bash
+   cd frontend
+   ```
+3. Instalar las dependencias:
+
+   ```bash
+   npm install
+   ```
+4. Iniciar el servidor de desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+5. La aplicación estará disponible en:
+
+   ```
+   http://localhost:5173
+   ```
+
+El objetivo principal de esta web es brindar a los potenciales clientes una vista clara y atractiva del complejo de cabañas, facilitando la exploración del lugar y destacando sus servicios y comodidades.
